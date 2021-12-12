@@ -34,7 +34,8 @@ public class Main {
                         double a = x.get(1), b = x.get(0), c = y.get(1), d = y.get(0);
                         return Double.compare(c*(b + d) + a*b, a*(b + d) + c*d ); }).collect(Collectors.toList());
 
-            System.out.println(Arrays.toString(jobs.stream().mapToInt(x -> x.get(2).intValue()).toArray()).replaceAll("(\\[)|]", "") + "\n");
+            System.out.println(Arrays.toString(jobs.stream().mapToInt(x -> x.get(2).intValue()).toArray()).replaceAll("(\\[)|]|,", ""));
+            System.out.println();
 
         }
 
